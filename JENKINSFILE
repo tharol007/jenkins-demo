@@ -1,0 +1,37 @@
+pipeline {
+    agent {
+        label VM
+    }
+    stages {
+        stage('one') {
+            steps {
+                echo 'one'
+            }
+        }
+        stage('two') {
+            steps {
+                echo 'two'
+            }
+        }
+        stage('three') {
+            steps {
+                echo 'three'
+            }
+        }
+        stage('four') {
+            steps {
+                echo 'four'
+            }
+        }
+        stage('five') {
+            steps {
+                echo 'five'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'cleanup'
+        }
+    }
+}
